@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Mobile Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="menu-container" id="menuContainer">
+        <h1>Car Mobile Game</h1>
+        <button id="startBtn">Start Game</button>
+        <button id="optionBtn">Options</button>
+    </div>
+    
+    <div class="option-container" id="optionContainer" style="display: none;">
+        <h2>Options</h2>
+        <label for="volume">Volume: </label>
+        <input type="range" id="volume" min="0" max="100" value="50">
+        <button id="backBtn">Back to Menu</button>
+    </div>
+
+    <div class="game-container" id="gameContainer" style="display: none;">
+        <div class="road">
+            <div class="car"></div>
+            <div class="score">Score: <span id="score">0</span></div>
+            <div class="game-over" id="gameOver">Game Over!</div>
+        </div>
+        <div class="controls">
+            <button id="leftBtn">Left</button>
+            <button id="rightBtn">Right</button>
+            <button id="restartBtn" style="display: none;">Restart</button>
+        </div>
+    </div>
+
+    <!-- Add background music -->
+    <audio id="bgMusic" src="car.mp3" loop></audio>
+
+    <!-- Add collision sound -->
+    <audio id="collisionSound" src="collision.mp3"></audio>
+
+    <script src="script.js"></script>
+</body>
+</html>
